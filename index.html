@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+<!-- 참고사항
+사전캠프간 교육영상의 부트스트랩에서 긁어서 사용중입니다. -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,27 +13,41 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
+
+
         .title {
-            background-color: green;
+            height: 200px;
+            width: 400px;
+            color: black;
 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background-image: url(dogfootprint.jpg);
+            background-position: center;
+            background-size: 400px 200px ;
+
+            margin: auto;
         }
 
-        .main {
-            background-color: blue;
+        .goals {
+            text-align: center;
         }
 
-        .card {
+        .col {
             background-color: aqua;
-            width: 800px;
             margin: 20px auto 20px auto;
+            
         }
+
         .profile4 {
-            width: 500px;
-            height: 400px;
+            width: auto;
+            height: auto;
             padding: 50px;
 
         }
@@ -37,67 +55,73 @@
 </head>
 
 <body>
-    <div class="title">
-        <div>
-            <h1>개발자국</h1>
+    <div>
+        <div class="title">
+            <h1 >개발자국</h1>
         </div>
     </div>
 
     <div class="main">
-        <div>
+        <div class="goals">
+            개발자국에서는 이런 목적을 가지고 있어요!.
             <p>
-                우리의 목표
+                1. 주 80시간 이상 코딩하기
+                2. 매너있게 소통하기
+                3. 정해진 시간 동안 출석하기
+                4. 자리 비울 때 팀원들에게 고지하기
             </p>
-        </div>
-    </div>
 
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-        <div class="col">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">사람이름</h5>
-                    <p class="card-text">간략한 자기 소개</p>
+
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 g-2">
+            <div class="col">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">사람이름</h5>
+                        <p class="card-text">가나다ㅏ람ㄴ라만람날만람ㅇ러가나다ㅏ람ㄴ라만람날만람ㅇ러가나다ㅏ람ㄴ라만람날만람ㅇ러가나다ㅏ람ㄴ라만람날만람ㅇ러가나다ㅏ람ㄴ라만람날만람ㅇ러가나다ㅏ람ㄴ라만람날만람ㅇ러가나다ㅏ람ㄴ라만람날만람ㅇ러가나다ㅏ람ㄴ라만람날만람ㅇ러가나다ㅏ람ㄴ라만람날만람ㅇ러</p>
                         <button type="button" class="btn btn-primary" onclick="location.href=''">Primary</button>
                         <!-- 각 카드마다 location.herf 뒤에 페이지 이동할 사이트 만들어 넣을 예정 -->
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">사람이름</h5>
+                        <p class="card-text"> 가나다ㅏ람ㄴ라만람날만람ㅇ러가나다ㅏ람ㄴ라만람날만람ㅇ러가나다ㅏ람ㄴ라만람날만람ㅇ러가나다ㅏ람ㄴ라만람날만람ㅇ러가나다ㅏ람ㄴ라만람날만람ㅇ러가나다ㅏ람ㄴ라만람날만람ㅇ러가나다ㅏ람ㄴ라만람날만람ㅇ러</p>
+                        <button type="button" class="btn btn-primary" onclick="location.href=''">Primary</button>
+                        <!-- 각 카드마다 location.herf 뒤에 페이지 이동할 사이트 만들어 넣을 예정 -->
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">사람이름</h5>
+                        <p class="card-text">간략한 자기 소개</p>
+                        <button type="button" class="btn btn-primary" onclick="location.href=''">Primary</button>
+                        <!-- 각 카드마다 location.herf 뒤에 페이지 이동할 사이트 만들어 넣을 예정 -->
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img class="profile4"
+                    src="https://i1.daumcdn.net/thumb/C264x200/?fname=https://blog.kakaocdn.net/dn/bJsCQo/btsCwciqbj6/zKZiuQ8xXLHsJYHtmVOlok/img.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">홍승찬</h5>
+                    <p class="card-text">남 29세 ENFP</p>
+                    <button type="button" class="btn btn-primary" onclick="location.href=''">Primary</button>
+                        <!-- 각 카드마다 location.herf 뒤에 페이지 이동할 사이트 만들어 넣을 예정 -->
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">사람이름</h5>
-                    <p class="card-text">간략한 자기 소개</p>
-                        <button type="button" class="btn btn-primary" onclick="location.href=''">Primary</button>
-                        <!-- 각 카드마다 location.herf 뒤에 페이지 이동할 사이트 만들어 넣을 예정 -->
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">사람이름</h5>
-                    <p class="card-text">간략한 자기 소개</p>
-                        <button type="button" class="btn btn-primary" onclick="location.href=''">Primary</button>
-                        <!-- 각 카드마다 location.herf 뒤에 페이지 이동할 사이트 만들어 넣을 예정 -->
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img class="profile4"
-                src="https://i1.daumcdn.net/thumb/C264x200/?fname=https://blog.kakaocdn.net/dn/bJsCQo/btsCwciqbj6/zKZiuQ8xXLHsJYHtmVOlok/img.jpg"
-                class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">홍승찬</h5>
-                <p class="card-text">남 29세 ENFP</p>
-                <button type="button" class="btn btn-primary" onclick="location.href=''">Primary</button>
-                <!-- 각 카드마다 location.herf 뒤에 페이지 이동할 사이트 만들어 넣을 예정 -->
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>
