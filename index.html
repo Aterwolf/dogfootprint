@@ -45,12 +45,22 @@
             text-align: center;
         }
 
-        .profilimg {
+        .card{
+            align-items: center;
+        }
+        .card-img-top{
             height: 300px;
-            object-fit: contain;
+            width: 300px;
+            
+        }
+
+    
+        /* .profilimg {
+            height: 300px;
+            object-fit: contain;*/
             /* object-fit은 이미지나 비디오 같은 요소를 어떻게 보여줄지에 대한 태그 */
 
-        }
+         
     </style>
     <script>
         function opencloserule() {
@@ -88,6 +98,7 @@
             </div>
 
             <div id="goals" class="rule">
+                <p> 김경연 : 매일 하나 이상 배우기<br>
                 <p> 김경원 :<br>
                     서가희 : 개발자 취업 성공하기<br>
                     조민기 : 내배캠 무사히 수료하기<br>
@@ -102,6 +113,12 @@
         <div class="row row-cols-1 row-cols-md-2 g-2">
             <div class="col">
                 <div class="card">
+                    <img src="/image/ky.jpg" class="card-img-top" alt="...">
+                    <div class="card-body profilimg">
+                        <h5 class="card-title">김경연</h5>
+                        <p class="card-text">여 26세 ISTJ</p>
+                        <button type="button" class="btn btn-dark"
+                            onclick="location.href='ky_page.html'">My Page</button>
                     <img src="..." class="card-img-top profilimg" alt="...">
                     <div class="card-body ">
                         <h5 class="card-title">김경연</h5>
