@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- 참고사항
+사전캠프간 교육영상의 부트스트랩에서 긁어서 사용중입니다. -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개발자국</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+        .title {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .title>img {
+            width: 23%;
+        }
+
+        .buttons>button {
+            padding: 10px;
+        }
+
+        .buttons {
+            margin: 2% auto;
+            text-align: center;
+        }
+
+        .rule {
+            width: 500px;
+            margin: 2% auto;
+            padding: 20px 100px;
+            display: none;
+
+            background-color: black;
+            color: white;
+
+            border: 1px solid white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 3px 0px black;
+        }
+
+        .profilimg {
+            height: 300px;
+            object-fit: contain;
+            /* object-fit은 이미지나 비디오 같은 요소를 어떻게 보여줄지에 대한 태그 */
+        }
+
+        .card {
+            margin: 0 auto;
+
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, .125);
+            border-radius: 0.25rem;
+        }
+    </style>
+    <script>
+        function opencloserule() {
+            $('#rules').toggle();
+
+        }
+        function openclosegoal() {
+            $('#goals').toggle();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="title">
+        <img src="image/logo.png">
+    </div>
+
+    <!-- <div class="main"> -->
+    <div class="buttons">
+        <button onclick="opencloserule()" type="button" class="btn btn-dark">개발자국에는 이런 룰이
+            있어요!</button>
+        <button onclick="openclosegoal()" type="button" class="btn btn-dark">개발자국 사람들은 이런 목표가
+            있어요!</button>
+    </div>
+
+    <div id="rules" class="rule">
+        <p> 1. 주 80시간 이상 코딩하기<br>
+            2. 매너있게 소통하기<br>
+            3. 정해진 시간 동안 출석하기<br>
+            4. 자리 비울 때 팀원들에게 고지하기
+        </p>
+    </div>
+
+    <div id="goals" class="rule">
+        <p> 김경원 :<br>
+            서가희 : 개발자 취업 성공하기<br>
+            조민기 : 내배캠 무사히 수료하기<br>
+            홍승찬 :
+        </p>
+    </div>
+    <!-- </div> -->
+
+
+    <div class="goal">
+
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 g-2">
+        <div class="col">
+            <div class="card">
+                <img src="..." class="card-img-top profilimg" alt="...">
+                <div class="card-body ">
+                    <h5 class="card-title">김경연</h5>
+                    <p class="card-text">여 26세 ISTJ</p>
+                    <button type="button" class="btn btn-dark" onclick="location.href='ky_page.html'">My Page</button>
+                    <!-- 각 카드마다 location.herf 뒤에 페이지 이동할 사이트 만들어 넣을 예정 -->
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="https://github.com/Aterwolf/dogfootprint/blob/main/image/dog2.jpg?raw=true"
+                    class="card-img-top profilimg" alt="...">
+                <div class="card-body ">
+                    <h5 class="card-title">서가희</h5>
+                    <p class="card-text">여 29세 ESTP</p>
+                    <button type="button" class="btn btn-dark" onclick="location.href='Introduction.html'">My
+                        Page</button>
+                    <!-- 각 카드마다 location.herf 뒤에 페이지 이동할 사이트 만들어 넣을 예정 -->
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="image/jo.jpg" class="card-img-top profilimg" alt="...">
+                <div class="card-body ">
+                    <h5 class="card-title">조민기</h5>
+                    <p class="card-text">남 29세 INFP</p>
+                    <button type="button" class="btn btn-dark" onclick="location.href='mypage.html'">My Page</button>
+                    <!-- 각 카드마다 location.herf 뒤에 페이지 이동할 사이트 만들어 넣을 예정 -->
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="https://i1.daumcdn.net/thumb/C264x200/?fname=https://blog.kakaocdn.net/dn/bJsCQo/btsCwciqbj6/zKZiuQ8xXLHsJYHtmVOlok/img.jpg"
+                    class="card-img-top profilimg" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">홍승찬</h5>
+                    <p class="card-text">남 29세 ENFP</p>
+                    <button type="button" class="btn btn-dark" onclick="location.href=''">My Page</button>
+                    <!-- 각 카드마다 location.herf 뒤에 페이지 이동할 사이트 만들어 넣을 예정 -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
