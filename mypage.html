@@ -2,103 +2,106 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>팀원 소개</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>팀원 소개</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
-        .title {
-            height: 200px;
-            width: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+    body{
+      background-color: black;
+    }
+    .title {
+      height: 200px;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-        }
+    }
 
-        .subtitle {
-            /* background-color: black; */
-            width: auto;
-            text-align: center;
+    .subtitle {
+      /* background-color: black; */
+      width: auto;
+      text-align: center;
+      border: 5px solid white;
+      background-color: white;
+    }
 
-        }
-        .main{
-            display: flex;
-            
-        }
-        .card {
-            width: 500px;
-            margin: 10px 10px 10px 10px;
-            border: 4px solid;
-            text-align: center;
-            font-size : 20px
-            
-        }
+    .photocard {
+      display: flex;
 
-        .image-box {
-            width: 100%;
-            height: 300px;
+    }
 
-            background-color: green;
-        }
+    .card {
+      width: 500px;
+      margin: 10px 10px 10px 10px;
+      border: 4px solid;
+      text-align: center;
+      font-size: 20px
+    }
 
-        .image-size {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+    .image-box {
+      width: 100%;
+      height: 300px;
+      background-color: green;
+    }
+
+    .image-size {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
 
 
-        }
-    </style>
+    }
+  </style>
 </head>
 
 <body>
-    <div>
-        <div>
-            <div class="title">
-                <h1><a href="index.html"><img src="image/logo.png"></a></h1>
-            </div>
-        </div>
-        <div class="subtitle">
-            <h1>저희 집 주인님의 사진첩이에요!</h1>
-        </div>
+  <div>
+    <div class="title">
+      <h1><a href="index.html"><img src="image/logo.png"></a></h1>
+    </div>
+    <div class="subtitle">
+      <h1>저희 집 주인님의 사진첩이에요!</h1>
     </div>
 
-    <div class="main">
-        <div class="card">
-            <div class="image-box">
-                <img class="image-size" src="image/leone1.jpg" alt="...">
-            </div>
-            <p>누워있는 레옹씨</p>
-        </div>
-        <div class="card">
-            <div class="image-box">
-                <img class="image-size" src="image/leone2.jpg" alt="...">
-            </div>
-            <p>하품하는 레옹씨</p>
-        </div>
-        <div class="card">
-            <div class="image-box">
-                <img class="image-size" src="image/leone3.jpg" alt="...">
-            </div>
-            <p>문지방 뜯는 레옹씨</p>
-        </div>
-        <div class="card">
-            <div class="image-box">
-                <img class="image-size" src="image/leone4.jpg" alt="...">
-            </div>
-            <p>케이지에 들어간 레옹씨</p>
-        </div>
-    </div>
+  </div>
 
-    
+  <div class="photocard">
+    <div class="card">
+      <div class="image-box">
+        <img class="image-size" src="image/leone1.jpg" alt="...">
+      </div>
+      <p>누워있는 레옹씨</p>
+    </div>
+    <div class="card">
+      <div class="image-box">
+        <img class="image-size" src="image/leone2.jpg" alt="...">
+      </div>
+      <p>하품하는 레옹씨</p>
+    </div>
+    <div class="card">
+      <div class="image-box">
+        <img class="image-size" src="image/leone3.jpg" alt="...">
+      </div>
+      <p>문지방 뜯는 레옹씨</p>
+    </div>
+    <div class="card">
+      <div class="image-box">
+        <img class="image-size" src="image/leone4.jpg" alt="...">
+      </div>
+      <p>케이지에 들어간 레옹씨</p>
+    </div>
+  </div>
+
+
 </body>
 
 
