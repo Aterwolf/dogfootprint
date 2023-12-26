@@ -20,33 +20,87 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+
         }
 
         .container {
             width: 100%;
             height: 100%;
         }
-        .subtitle{
-            background-color: green;
+
+        .subtitle {
+            background-color: black;
             width: auto;
+            text-align: center;
+
+        }
+        .main{
             display: flex;
+            
+        }
+        .card {
+            width: 500px;
+            margin: 10px 10px 10px 10px;
+            border: 4px solid;
+
+        }
+
+        .image-box {
+            width: 100%;
+            height: 300px;
+
+            background-color: green;
+        }
+
+        .image-size {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+
         }
     </style>
 </head>
 
 <body>
-    <div class = "container">
+    <div class="container">
         <div>
             <div class="title">
                 <h1><a href="index.html"><img src="image/logo.png"></a></h1>
             </div>
         </div>
-
-        <div class ="subtitle">
+        <div class="subtitle">
             <h1>저희 집 주인님의 사진첩이에요!</h1>
         </div>
+
     </div>
+    <div class="main">
+        <div class="card">
+            <div class="image-box">
+                <img class="image-size" src="image/leone1.jpg" alt="...">
+            </div>
+            <p>누워있는 레옹씨</p>
+        </div>
+        <div class="card">
+            <div class="image-box">
+                <img class="image-size" src="image/leone2.jpg" alt="...">
+            </div>
+            <p>누워있는 레옹씨</p>
+        </div>
+        <div class="card">
+            <div class="image-box">
+                <img class="image-size" src="image/leone3.jpg" alt="...">
+            </div>
+            <p>누워있는 레옹씨</p>
+        </div>
+    </div>
+
+
+
+    </div>
+
+    </div>
+
 </body>
 
 
