@@ -19,18 +19,34 @@
         }
 
         .main {
-            background-color: blue;
+            /* width: 500px; */
+            margin: 20px auto 20px auto;
+            border: 1px solid white;
+            padding: 20px;
+            border-radius: 10px;
         }
 
-        .card {
-            background-color: aqua;
-            width: 800px;
-            margin: 20px auto 20px auto;
-        }
-        .profile4 {
+        .rule{
+            background-color: green;
             width: 500px;
-            height: 400px;
-            padding: 50px;
+            margin: 20px auto 20px auto;
+            border: 1px solid white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 3px 0px black;
+        }
+        
+
+
+        .buttons {
+            text-align: center;
+        }
+
+        .profilimg{
+
+            height: 300px;
+            object-fit: contain;
+            /* object-fit은 이미지나 비디오 같은 요소를 어떻게 보여줄지에 대한 태그 */
 
         }
     </style>
@@ -51,53 +67,57 @@
         </div>
     </div>
 
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-        <div class="col">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">사람이름</h5>
-                    <p class="card-text">간략한 자기 소개</p>
-                        <button type="button" class="btn btn-primary" onclick="location.href=''">Primary</button>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 g-2">
+            <div class="col">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"> </p>
+                        <button type="button" class="btn btn-dark"
+                            onclick="location.href=">Primary</button>
                         <!-- 각 카드마다 location.herf 뒤에 페이지 이동할 사이트 만들어 넣을 예정 -->
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">서가희</h5>
+                        <p class="card-text">여 29세 ESTP</p>
+                        <button type="button" class="btn btn-dark" onclick="location.href='Introduction.html'">Primary</button>
+                        <!-- 각 카드마다 location.herf 뒤에 페이지 이동할 사이트 만들어 넣을 예정 -->
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="image/jo.jpg" class="card-img-top profilimg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">조민기</h5>
+                        <p class="card-text">남 29세 INFP</p>
+                        <button type="button" class="btn btn-dark " onclick="location.href='mypage.html'">Primary</button>
+                        <!-- 각 카드마다 location.herf 뒤에 페이지 이동할 사이트 만들어 넣을 예정 -->
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img 
+                        src="https://i1.daumcdn.net/thumb/C264x200/?fname=https://blog.kakaocdn.net/dn/bJsCQo/btsCwciqbj6/zKZiuQ8xXLHsJYHtmVOlok/img.jpg"
+                        class="card-img-top profilimg" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">홍승찬</h5>
+                        <p class="card-text">남 29세 ENFP</p>
+                        <button type="button" class="btn btn-dark" onclick="location.href=''">Primary</button>
+                        <!-- 각 카드마다 location.herf 뒤에 페이지 이동할 사이트 만들어 넣을 예정 -->
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">사람이름</h5>
-                    <p class="card-text">간략한 자기 소개</p>
-                        <button type="button" class="btn btn-primary" onclick="location.href=''">Primary</button>
-                        <!-- 각 카드마다 location.herf 뒤에 페이지 이동할 사이트 만들어 넣을 예정 -->
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">사람이름</h5>
-                    <p class="card-text">간략한 자기 소개</p>
-                        <button type="button" class="btn btn-primary" onclick="location.href=''">Primary</button>
-                        <!-- 각 카드마다 location.herf 뒤에 페이지 이동할 사이트 만들어 넣을 예정 -->
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <img class="profile4"
-                src="https://i1.daumcdn.net/thumb/C264x200/?fname=https://blog.kakaocdn.net/dn/bJsCQo/btsCwciqbj6/zKZiuQ8xXLHsJYHtmVOlok/img.jpg"
-                class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">홍승찬</h5>
-                <p class="card-text">남 29세 ENFP</p>
-                <button type="button" class="btn btn-primary" onclick="location.href=''">Primary</button>
-                <!-- 각 카드마다 location.herf 뒤에 페이지 이동할 사이트 만들어 넣을 예정 -->
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>
