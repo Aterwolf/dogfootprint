@@ -9,15 +9,47 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <style>
+    body {
+      background-color: #01101f;
+    }
+
+    .snowflake {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      top: -8px;
+    }
+
+    @keyframes fall {
+      from {}
+
+      to {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+
+
     .container {
       margin: 2% auto;
     }
 
     .title {
       width: 100%;
-      margin: 3% auto;
-      display: flex;
-      justify-content: center;
+      margin: auto auto 5% auto;
+
+      text-align: center;
+    }
+
+    .time {
+      position: absolute;
+      top: 25%;
+      right: 23%;
+
+      color: white;
+      font-size: 20px;
     }
 
     .contentBox {
@@ -25,8 +57,15 @@
       height: 60%;
       margin: 0% auto;
       padding: 2%;
-      border: 1px solid #eee;
-      border-radius: 5px;
+      position: relative;
+
+      border: 2px dashed rgba(255, 255, 255, 0.581);
+    }
+
+    .contentBox ul {
+      list-style: circle;
+      color: white;
+      font-size: 25px;
     }
 
     .imgBox {
@@ -36,7 +75,6 @@
     }
 
     .imgBox>img {
-      width: 100%;
       margin-bottom: 3%;
       display: flex;
       flex-direction: column;
@@ -44,108 +82,71 @@
       border-radius: 20px;
       width: 48%;
     }
-
-    .btnBox {
-      margin-top: 5%;
-      display: flex;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-    }
-
-    .btnBox>input {
-      width: 60%;
-      margin-right: 3%;
-      border: none;
-      border-bottom: 1px solid #a7a1a1;
-      ;
-    }
-
-    button {
-      width: 10%;
-      padding: 7px;
-      background-color: white;
-      border: 1px solid #43424299;
-      border-radius: 5px;
-    }
-
-    button:hover {
-      background-color: #000000c7;
-      ;
-      color: white;
-    }
-
-    .comments-Box {
-      width: 60%;
-      margin: 0 auto;
-    }
   </style>
 </head>
 
 <body>
   <div class="container">
     <div class="title">
-      <a href="index.html"> <img src="image/logo.png"> </a>
+      <a href="inedx.html"> <img src="image/logo2.png"> </a>
     </div>
-
+    <div class="time">
+      <p id="clock">현재 시간</p>
+    </div>
     <div class="contentBox">
       <div class="imgBox">
         <img src="image/dog-foot.jpg" class="card-img" alt="...">
         <img src="image/dog1.jpg" class="card-img" alt="...">
       </div>
-      <div>
-        <h5>서 가 희</h5>
-        <p>멍집사입니다 저희 집 아린이 사진이에요, 첫 미니 프로젝트라 많이 설레네요 ᄒᄒ</p>
-      </div>
-      <div class="btnBox">
-        <input id="reply" type="text" placeholder="* 여기에 댓글을 입력해 주세요">
-        <button id="btn">댓글 달기</button>
-      </div>
-    </div>
-
-    <div class="comments-Box">
-      <ul id="comments">
-
+      <ul>
+        <li>멍집사 입니다 저희 집 아린이 사진이에요!</li>
       </ul>
     </div>
 
   </div>
 </body>
 <script>
-  $('#btn').click(function () {
+  const body = document.querySelector("body");
+  const MIN_DURATION = 10;
+
+  function makeSnowflake() {
+    const snowflake = document.createElement("div");
+    const delay = Math.random() * 10;
+    const initialopacity = Math.random();
+    const duration = Math.random() * 20 + MIN_DURATION;
+
+    snowflake.classList.add("snowflake");
+    snowflake.style.left = `${Math.random() * window.screen.width}px`;
+    snowflake.style.animationDelay = `${delay}s`;
+    snowflake.style.opacity = initialopacity;
+    snowflake.style.animation = `fall ${duration}s linear`;
+
+    body.appendChild(snowflake);
+
+    setTimeout(() => {
+      body.removeChild(snowflake);
+      makeSnowflake();
+    }, (duration + delay) * 1000);
+  }
+  makeSnowflake();
+  for (let index = 0; index < 50; index++) {
+    setTimeout(makeSnowflake, 500 * index);
+  }
+
+  const clock = document.querySelector("#clock");
+
+  function getclock() {
     let now = new Date();
 
-    let year = now.getFullYear();
-    let month = now.getMonth() + 1;
-    let date = now.getDate();
+    let hour = now.getHours();
+    let minute = now.getMinutes();
+    let Second = now.getSeconds();
 
-    let hours = now.getHours();
-    let minutes = now.getMinutes();
+    clock.innerText = `현재 시간 : ${hour}시 ${minute}분 ${Second}초`;
+  }
+  getclock();
+  setInterval(getclock, 1000);
 
-    console.log(year, month, date)
-
-    let reply = $('#reply').val();
-
-    if (reply === '' || reply.val === 0) {
-      alert('댓글을 입력해 주세요');
-      $('#reply').focus();
-    } else {
-      let replyBox = `
-    <br> <li>${reply} <br>
-           <small> 작성일자 : ${year}년 ${month}월 ${date}일 ${hours}시 ${minutes}분</small>
-          <small> /  새로고침하면 모든 댓글이 사라집니다   /</small>
-          </li>
-      `
-      $('#comments').append(replyBox);
-
-      non();
-    }
-  });
-
-  function non() {
-    reply.value = ""
-
-  };
 </script>
 
 </html>
